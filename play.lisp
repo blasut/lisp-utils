@@ -24,3 +24,9 @@
 (funcall (thread-it (curry #'+ 1)
            (curry #'+ 2)
            (curry #'- 2)) 0)
+
+
+(defmacro exec-thread-it (start &body fns)
+  `(funcall (thread-it ,@fns) ,start))
+
+(exec-thread-it 0 (curry #'+ 1) (curry #'+ 1))
