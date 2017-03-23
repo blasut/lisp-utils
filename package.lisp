@@ -3,4 +3,5 @@
 (defpackage #:blasut-utils
   (:use #:cl)
   (:export :str
-           :comment))
+           :comment
+           :if-let))
