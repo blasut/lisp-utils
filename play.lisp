@@ -2,6 +2,8 @@
 ;;; it is not included in the package export
 (in-package #:blasut-utils)
 
+; http://blog.thezerobit.com/2012/07/28/lazy-sequences-in-common-lisp.html
+
 (defun curry (func &rest args)
   "Used to create a curried function, has to be used with funcall because cl is a lisp-2. for example: (funcall (curry #'+ 3) 5)"
   (lambda (&rest more-args)
